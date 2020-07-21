@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+   FILE *fp;
+   char name[]= "yusuf";
+   fp = fopen("a", "r+");
+   fseek(fp, 20, SEEK_SET);
+   fwrite(name, strlen(name),1, fp);
+   fclose(fp);
+}
